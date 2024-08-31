@@ -1,0 +1,64 @@
+/* Add this to your global CSS file, e.g., src/index.css */
+.custom-radio input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1.5px solid #00000025;
+    background-color: #d4d1d1;
+    /* Black border */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-radio input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #242323;
+    /* Black inner circle */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Add this to your global CSS file, e.g., src/index.css */
+.custom-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #aba8a8;
+    /* Black border */
+    border-radius: 0.25rem;
+    /* Rounded corners for the checkbox */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+    background-color: #dbdada;
+    /* Black background when checked */
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+    content: '';
+    display: block;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid #aba8a8;
+    border-width: 0 0.125rem 0.125rem 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
